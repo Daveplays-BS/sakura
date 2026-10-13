@@ -1,0 +1,20 @@
+{
+  "id": "sakura",
+  "name": "Sakura",
+  "author": "Daveplays-BS",
+  "version": "1.0.0",
+  "description": "A sakura-inspired theme with plum tones, blossom accents, and light and dark modes.",
+  "category": "theme",
+  "url": "https://github.com/Daveplays-BS/sakura",
+  "update_url": "https://raw.githubusercontent.com/Daveplays-BS/sakura/main/sakura/update.json",
+  "namespace": "DaveplaysBS\\Sakura",
+  "class": "SakuraPlugin",
+  "panels": [
+    "admin",
+    "server",
+    "app"
+  ],
+  "api_version": "1",
+  "panel_version": null,
+  "composer_packages": null
+}
