@@ -59,24 +59,6 @@ body::before {
   opacity: 0.34;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 88px;
-  right: clamp(24px, 7vw, 120px);
-  width: 112px;
-  height: 112px;
-  border-radius: 50%;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at 38% 36%,
-    rgba(255, 226, 239, 0.13) 0 1px,
-    rgba(229, 163, 199, 0.075) 2px 38%,
-    transparent 70%
-  );
-  box-shadow: 0 0 70px rgba(183, 113, 165, 0.07);
-}
 
 .fi-topbar,
 .fi-topbar > div,
@@ -297,12 +279,6 @@ textarea:focus-visible,
   body::before {
     background-size: 220px 220px;
     opacity: 0.22;
-  }
-  body::after {
-    width: 76px;
-    height: 76px;
-    right: 18px;
-    top: 76px;
   }
   .sakura-petals span {
     opacity: 0.42;
@@ -580,17 +556,8 @@ html:not(.dark) body {
     linear-gradient(155deg, #fffafd 0%, #fff3f9 52%, #f8f1ff 100%) !important;
 }
 html:not(.dark) body::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23c65b91' stroke-width='1.1' stroke-linecap='round' opacity='.23'%3E%3Cg transform='translate(30 48) rotate(-16)'%3E%3Cellipse cy='-7' rx='3.3' ry='5.4'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(72)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(144)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(216)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(288)'/%3E%3Ccircle r='1.7' fill='%23c65b91' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(164 142) rotate(18) scale(.72)'%3E%3Cellipse cy='-7' rx='3.3' ry='5.4'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(72)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(144)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(216)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(288)'/%3E%3Ccircle r='1.7' fill='%23c65b91' stroke='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
-  opacity: 0.26 !important;
-}
-html:not(.dark) body::after {
-  background: radial-gradient(
-    circle at 38% 36%,
-    rgba(255, 255, 255, 0.85) 0 1px,
-    rgba(238, 170, 207, 0.25) 2px 38%,
-    transparent 70%
-  ) !important;
-  box-shadow: 0 0 70px rgba(211, 124, 174, 0.12) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23b94f86' stroke-width='1.25' stroke-linecap='round' opacity='.38'%3E%3Cg transform='translate(30 48) rotate(-16)'%3E%3Cellipse cy='-7' rx='3.3' ry='5.4'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(72)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(144)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(216)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(288)'/%3E%3Ccircle r='1.7' fill='%23c65b91' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(164 142) rotate(18) scale(.72)'%3E%3Cellipse cy='-7' rx='3.3' ry='5.4'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(72)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(144)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(216)'/%3E%3Cellipse cy='-7' rx='3.3' ry='5.4' transform='rotate(288)'/%3E%3Ccircle r='1.7' fill='%23c65b91' stroke='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+  opacity: 0.38 !important;
 }
 html:not(.dark) body,
 html:not(.dark)
@@ -696,4 +663,58 @@ html:not(.dark) .fi-console-page #send-command::placeholder {
 html:not(.dark) .fi-sidebar .fi-badge,
 html:not(.dark) .fi-page .fi-badge {
   color: #9f356f !important;
+}
+
+body::after { content: none !important; display: none !important; }
+html:not(.dark) .fi-page:has(.fi-ta) [class*="bg-slate-"],
+html:not(.dark) .fi-page:has(.fi-ta) [class*="bg-gray-"],
+html:not(.dark) .fi-page:has(.fi-ta) [class*="bg-blue-"],
+html:not(.dark) .fi-page:has(.fi-ta) [class*="bg-indigo-"],
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-ctn,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-header-ctn,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-content,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-pagination,
+html:not(.dark) .fi-section,
+html:not(.dark) .fi-card,
+html:not(.dark) .fi-wi,
+html:not(.dark) .fi-modal-window,
+html:not(.dark) .fi-dropdown-panel,
+html:not(.dark) .fi-popover,
+html:not(.dark) .fi-user-menu {
+  background-color: rgba(255, 249, 252, 0.24) !important;
+  border-color: rgba(166, 104, 139, 0.28) !important;
+  box-shadow: none !important;
+}
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-ctn {
+  border: 1px solid rgba(166, 104, 139, 0.28) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-header-ctn,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-content,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-pagination {
+  border-radius: 0 !important;
+}
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-pagination {
+  border-top: 1px solid rgba(166, 104, 139, 0.2) !important;
+}
+html:not(.dark) .fi-page:has(.fi-ta) .fi-input-wrp,
+html:not(.dark) .fi-page:has(.fi-ta) input,
+html:not(.dark) .fi-page:has(.fi-ta) select,
+html:not(.dark) .fi-page:has(.fi-ta) [role="tab"],
+html:not(.dark) .fi-page:has(.fi-ta) [role="tablist"],
+html:not(.dark) .fi-dropdown-panel,
+html:not(.dark) .fi-modal-window,
+html:not(.dark) .fi-popover,
+html:not(.dark) .fi-user-menu {
+  background-color: rgba(255, 250, 253, 0.88) !important;
+  color: #382638 !important;
+  border-color: rgba(166, 104, 139, 0.28) !important;
+  border-radius: 8px !important;
+}
+html:not(.dark) .fi-page:has(.fi-ta) .fi-pagination .fi-input-wrp,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-pagination .fi-input-wrp,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-pagination select,
+html:not(.dark) .fi-page:has(.fi-ta) .fi-ta-pagination select {
+  border-radius: 8px !important;
 }
