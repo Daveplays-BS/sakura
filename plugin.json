@@ -2,7 +2,7 @@
   "id": "sakura",
   "name": "Sakura",
   "author": "Daveplays-BS",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A sakura-inspired theme with plum tones, blossom accents, and light and dark modes.",
   "category": "theme",
   "url": "https://github.com/Daveplays-BS/sakura",
@@ -14,7 +14,7 @@
     "server",
     "app"
   ],
-  "api_version": "1",
+  "api_version": 1,
   "panel_version": null,
   "composer_packages": null
 }
